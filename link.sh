@@ -12,10 +12,15 @@ else
   do
     BASENAME=$(basename "${FILE}")
     FILENAME="${DIRNAME}/${BASENAME}"
-    if [[ ! "${FILE}" == *.sh ]]
-    then
+    case ${FILE} in
+    *link.sh)
+      ;;
+    *README.md)
+      ;;
+    *)
       ln -s "${FILENAME}" "${HOME}/.${BASENAME}"
-    fi
+      ;;
+    esac
   done
 fi
 

@@ -13,6 +13,10 @@ alias lla='ls -lAh'
 alias llt='ls -lAhtr'
 alias gls='git status'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
 
@@ -22,6 +26,7 @@ shopt -s histappend
 # check window size and update LINES and COLUMNS after every command
 shopt -s checkwinsize
 
+# some color variables for convenience
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 
@@ -31,6 +36,7 @@ YELLOW="\[$(tput setaf 3)\]"
 CYAN="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
 
+# multiline prompt
 __prompt_command() {
     local EXIT="$?"             # This needs to be first
     PS1="`date +%H:%M:%S` "
@@ -52,3 +58,9 @@ __prompt_command() {
 PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 
 __prompt_command
+
+# bash/git completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
