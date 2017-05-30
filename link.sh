@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+FOLDER=$1
+
+if [[ ! -d "${FOLDER}" ]]
+then
+  echo "Usage: $0 <folder-with-dot-files-to-link>"
+  exit 1
+else
+  DIRNAME=$(cd $(dirname "${FOLDER}"); pwd)
+  for FILE in ${FOLDER}/*
+  do
+    BASENAME=$(basename "${FILE}")
+    FILENAME="${DIRNAME}/${BASENAME}"
+    if [[ ! "${FILE}" == *.sh ]]
+    then
+      ln -s "${FILENAME}" "${HOME}/.${BASENAME}"
+    fi
+  done
+fi
+
