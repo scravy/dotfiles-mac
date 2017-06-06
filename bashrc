@@ -17,6 +17,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias gvim='open -a MacVim'
+
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
 
