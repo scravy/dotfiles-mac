@@ -19,6 +19,8 @@ alias ....='cd ../../..'
 
 alias gvim='open -a MacVim'
 
+alias heidi='wine /Applications/HeidiSQL_9.4_Portable/heidisql.exe'
+
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
 
@@ -65,4 +67,12 @@ __prompt_command
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+scala11() {
+  sbt -batch 'set scalaVersion := "2.11.11"' console
+}
+
+scala12() {
+  sbt -batch 'set scalaVersion := "2.12.2"' console
+}
 
