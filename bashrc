@@ -12,6 +12,7 @@ alias la='ls -A'
 alias lla='ls -lAh'
 alias llt='ls -lAhtr'
 alias gls='git status'
+alias mysql='/usr/local/mysql/bin/mysql'
 
 alias ..='cd ..'
 alias ...='cd ../..'
