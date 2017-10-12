@@ -21,6 +21,7 @@ alias ....='cd ../../..'
 alias gvim='open -a MacVim'
 
 alias heidi='wine /Applications/HeidiSQL_9.4_Portable/heidisql.exe'
+alias s3='aws s3'
 
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
@@ -76,4 +77,6 @@ scala11() {
 scala12() {
   sbt -batch 'set scalaVersion := "2.12.2"' console
 }
+
+eval "$(thefuck --alias)"
 
