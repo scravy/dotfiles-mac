@@ -23,6 +23,12 @@ alias gvim='open -a MacVim'
 alias heidi='wine /Applications/HeidiSQL_9.4_Portable/heidisql.exe'
 alias s3='aws s3'
 
+alias rgrep=$(which grep) # raw grep
+alias rless=$(which less) # raw less
+
+alias grep='rgrep -I --color=always'
+alias less='rless -R'
+
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
 
@@ -65,9 +71,8 @@ PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 
 __prompt_command
 
-# bash/git completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 
 alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -82,3 +87,4 @@ scala12() {
 
 eval "$(thefuck --alias)"
 
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin
