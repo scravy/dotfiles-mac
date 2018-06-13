@@ -87,4 +87,4 @@ scala12() {
 
 eval "$(thefuck --alias)"
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin
