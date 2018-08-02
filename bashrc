@@ -23,11 +23,13 @@ alias gvim='open -a MacVim'
 alias heidi='wine /Applications/HeidiSQL_9.4_Portable/heidisql.exe'
 alias s3='aws s3'
 
+alias rdiff=$(which diff) # raw diff
 alias rgrep=$(which grep) # raw grep
 alias rless=$(which less) # raw less
 
 alias grep='rgrep -I --color=always'
 alias less='rless -R'
+alias diff='rdiff --color=always'
 
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
@@ -87,4 +89,4 @@ scala12() {
 
 eval "$(thefuck --alias)"
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin:/usr/local/texlive/2018/bin/x86_64-darwin
