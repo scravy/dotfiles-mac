@@ -30,6 +30,7 @@ alias rless=$(which less) # raw less
 alias grep='rgrep -I --color=always'
 alias less='rless -R'
 alias diff='rdiff --color=always'
+alias jshell='docker run -it openjdk:10-slim /bin/jshell'
 
 # do not put duplicate lines or lines starting with a space in the history
 HISTCONTROL=ignoreboth
