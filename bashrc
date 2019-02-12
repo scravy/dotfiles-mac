@@ -12,6 +12,7 @@ alias la='ls -A'
 alias lla='ls -lAh'
 alias llt='ls -lAhtr'
 alias gls='git status'
+alias gpsup="git push --set-upstream origin \`echo \$git_current_branch\`"
 alias mysql='/usr/local/mysql/bin/mysql'
 
 alias ..='cd ..'
