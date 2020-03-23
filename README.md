@@ -3,7 +3,7 @@
 Usage:
 
 	git clone git@github.com:scravy/dotfiles-mac.git ~/.dotfiles
-	chmod u+x ~/.dotfiles\link.sh
+	chmod u+x ~/.dotfiles/link.sh
 	~/.dotfiles\link.sh ~/.dotfiles
 
 The link script creates a symlink for every file in the dot-files repository,
