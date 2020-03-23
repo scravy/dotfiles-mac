@@ -12,8 +12,6 @@ alias la='ls -A'
 alias lla='ls -lAh'
 alias llt='ls -lAhtr'
 alias gls='git status'
-alias gpsup="git push --set-upstream origin \`echo \$git_current_branch\`"
-alias mysql='/usr/local/mysql/bin/mysql'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -21,7 +19,6 @@ alias ....='cd ../../..'
 
 alias gvim='open -a MacVim'
 
-alias heidi='wine /Applications/HeidiSQL_9.4_Portable/heidisql.exe'
 alias s3='aws s3'
 
 alias rdiff=$(which diff) # raw diff
@@ -81,14 +78,6 @@ fi
 
 alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-scala11() {
-  sbt -batch 'set scalaVersion := "2.11.11"' console
-}
-
-scala12() {
-  sbt -batch 'set scalaVersion := "2.12.2"' console
-}
-
-eval "$(thefuck --alias)"
-
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin:/usr/local/texlive/2018/bin/x86_64-darwin
+
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"

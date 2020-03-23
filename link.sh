@@ -7,7 +7,7 @@ then
   echo "Usage: $0 <folder-with-dot-files-to-link>"
   exit 1
 else
-  DIRNAME=$(cd $(dirname "${FOLDER}"); pwd)
+  DIRNAME=$(cd "${FOLDER}"; pwd)
   for FILE in ${FOLDER}/*
   do
     BASENAME=$(basename "${FILE}")
