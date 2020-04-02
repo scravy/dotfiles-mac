@@ -15,7 +15,7 @@ else
     case ${FILE} in
     *link.sh)
       ;;
-    *README.md)
+    *.md)
       ;;
     *)
       ln -s "${FILENAME}" "${HOME}/.${BASENAME}"
