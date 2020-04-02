@@ -6,6 +6,7 @@ set encoding=utf-8
 set number
 set et
 set ff=unix
+set autoindent
 
 set directory=./.swp,~/.swp//,~/.tmp,~/tmp//,/tmp//,.
 
