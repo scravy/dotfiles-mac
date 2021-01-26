@@ -11,7 +11,7 @@ set autoindent
 set directory=./.swp,~/.swp//,~/.tmp,~/tmp//,/tmp//,.
 
 if has("gui_macvim")
-    set cul
+"    set cul
     colorscheme desert
     hi Normal guibg=gray10
     hi Cursorline guibg=black
@@ -35,10 +35,6 @@ if has("gui_macvim")
     set statusline+=%y
     set statusline+=\ [%{''.(&fenc!=''?&fenc:&enc).''}]
     set statusline+=\ [%L\ lines]
-endif
-
-if has("autocmd")
-    filetype plugin indent on
 endif
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
