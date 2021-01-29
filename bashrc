@@ -54,7 +54,7 @@ __prompt_command() {
     local EXIT="$?"             # This needs to be first
     PS1="`date +%H:%M:%S` "
 
-    PS1+="\[\033[01;32m\]\u@`hostname`\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
+    PS1+="\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
 
     if [ $EXIT != 0 ]; then
         PS1+=" (${RED}${EXIT}${RESET})"
