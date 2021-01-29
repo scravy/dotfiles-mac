@@ -78,24 +78,20 @@ fi
 
 alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-export PATH=$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/Users/julian/Library/Android/sdk/tools:/Users/julian/Library/Android/sdk/platform-tools:/Users/julian/Library/Haskell/bin:/Users/julian/.vimpkg/bin:/usr/local/texlive/2018/bin/x86_64-darwin
+export PATH=$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin:/usr/local/go/bin
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 alias kubesys='kubectl -n kube-system'
 
-export PATH="/Users/scravy/.local/bin:/usr/local/anaconda3/bin:$PATH"
+export PATH="$HOME/.local/bin:/usr/local/anaconda3/bin:$PATH"
 
 alias kubeuse='kubectl config use-context'
 
-export SPARK_HOME=/Users/scravy/incrmntal/spark-3.0.1-bin-hadoop3.2
-export PYTHONPATH=$SPARK_HOME/python
+export SPARK_HOME="$HOME/incrmntal/spark"
+export PYTHONPATH="$SPARK_HOME/python"
 
 alias kubenodes='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
 
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/scravy/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/scravy/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-# if [ -f '/Users/scravy/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/scravy/Downloads/google-cloud-sdk/completion.bash.inc'; fi
